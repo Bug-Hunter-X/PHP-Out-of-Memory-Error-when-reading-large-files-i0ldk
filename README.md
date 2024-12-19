@@ -1,0 +1,3 @@
+# PHP Out-of-Memory Error when reading large files
+This repository demonstrates a common PHP error: Out-of-memory errors when attempting to process large files.  The `bug.php` file shows the problematic code, while `bugSolution.php` offers a solution.
+The issue arises from loading the entire file into memory at once using `file_get_contents()`. For large files, this can lead to memory exhaustion.  The solution involves processing the file in chunks to prevent exceeding memory limits.
